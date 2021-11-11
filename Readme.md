@@ -22,4 +22,12 @@ This affects all versions of package [`node-pdf-generator`](https://github.com/d
 
 # Why is it vulnerable?
 1. The server is vulnerable to SSRF attacks
+2. Other URLs that is fed to the server will be visited by the server
+3. This allows the user forge a server request
+
+
+# More information on the CVE-2020-7740
+1. [Vicarius.io](https://www.vicarius.io/research-center/vulnerability/cve-2020-7740-id264841)
+2. [NVD](https://nvd.nist.gov/vuln/detail/CVE-2020-7740)
+3. [Original Repository](https://github.com/darrenhaken/node-pdf-generator)
 
