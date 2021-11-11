@@ -5,7 +5,7 @@ nconf.argv()
     .file({ file: 'config.json' })
     .defaults({
         port: 3000,
-        bindIp: '127.0.0.1'
+        bindIp: '0.0.0.0'
     });
 
 module.exports = {
