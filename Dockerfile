@@ -8,6 +8,9 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     npm \
     nodejs
 
+#Install libssl1.1
+RUN wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+RUN dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 # Install pdf viewer.
 RUN wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.focal_amd64.deb
 RUN apt-get install -y ./wkhtmltox_0.12.6-1.focal_amd64.deb

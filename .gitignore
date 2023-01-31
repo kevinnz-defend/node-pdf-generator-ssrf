@@ -77,3 +77,4 @@ typings/
 
 # Python cache
 *.pyc
+.dccache

@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 "./hidden service/__main__.py" &
+python3 "./HiddenService/__main__.py" &
 node NodePdfGeneratorServer
